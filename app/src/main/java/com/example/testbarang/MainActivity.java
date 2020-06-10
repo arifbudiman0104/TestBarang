@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btnTambah = findViewById(R.id.btnTambah);
-        btnLihat  = findViewById(R.id.btnLihat);
+        btnLihat = findViewById(R.id.btnLihat);
 
         btnTambah.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,5 +30,11 @@ public class MainActivity extends AppCompatActivity {
                 //besok lanjut
             }
         });
+        btnLihat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            startActivity(LihatBarang.getActIntent(MainActivity.this));
+            }}
+        );
     }
 }
